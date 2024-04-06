@@ -3,6 +3,9 @@ import React, { useEffect, useState, useContext } from "react";
 import { Data } from "../Context";
 import "./cart.css";
 export default function Cart() {
+
+
+  const navigate=useNavigate()
   const { cart, setcart ,itemNumber, setitemNumber} = useContext(Data);
   const [totalprice, settotalprice] = useState(0);
   useEffect(() => {
@@ -12,6 +15,11 @@ export default function Cart() {
   const removeitem = () => {
     setitemNumber(itemNumber - 1);
   };
+
+
+  const back=()=>{
+    navigate(-1)
+  }
 
   return (
     <div>
@@ -43,6 +51,7 @@ export default function Cart() {
                  
                   </div>
                   
+                  
 
                   
                   
@@ -56,6 +65,9 @@ export default function Cart() {
               </div>
               
             </div>
+            <div>
+                    <button onClick={back}>Back</button>
+                  </div>
           </div>
           
          

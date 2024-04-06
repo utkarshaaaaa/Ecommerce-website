@@ -88,7 +88,7 @@ export default function Homepage({ onClick }) {
       return e.category === itemcategory;
     });
     setdata(filteredItems);
-    console.log(filteredItems, "categoryyyyyyyyyyyy");
+    console.log(filteredItems, "categoryy");
   };
 
   return (
