@@ -1,6 +1,7 @@
 import { useLocation } from "react-router-dom";
 import axios from "axios";
 import "./items.css";
+import { Data } from "../Context";
 import React, { useEffect, useState, useContext } from "react";
 
 export default function ItemsDesc() {
@@ -8,6 +9,14 @@ export default function ItemsDesc() {
   const [data, setdata] = useState([]);
 
   const location = useLocation();
+  const {
+    cart,
+    setcart,
+    itemNumber,
+    setitemNumber,
+  
+  } = useContext(Data);
+
 
   setTimeout(() => {
     axios
@@ -25,6 +34,10 @@ export default function ItemsDesc() {
 
     setid(location.state.id);
   }, 1);
+
+  const Additem = () => {
+    setitemNumber(itemNumber + 1);
+  };
 
  
   return (
@@ -53,7 +66,7 @@ export default function ItemsDesc() {
                       <div class="image">
                         <img
                           src={e.thumbnail}
-                          alt=""
+                          alt="image"
                         />
                       </div>
                     </div>
@@ -71,11 +84,12 @@ export default function ItemsDesc() {
                   </div>
                   <div class="card__footer">
                     <div class="recommend">
-                      <p>Recommended by</p>
-                      <h3>Andrew Palmer</h3>
+                      
                     </div>
                     <div class="action">
-                      <button type="button">Add to cart</button>
+                      <button type="button"onClick={() => {
+                          setcart([...cart, e], Additem());
+                        }}>Add to cart</button>
                     </div>
                   </div>
                 </div>

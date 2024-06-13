@@ -6,8 +6,7 @@ import "./login.css";
 import React, { useEffect, useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 
-//username :kminchelle
-//password: '0lelplR'
+
 export default function Login() {
   const { setuserimg, datalist, setDatalist, userdata, setuserdata } =
     useContext(Data);
@@ -50,8 +49,14 @@ export default function Login() {
   };
   useEffect(() => {
     let log = localStorage.getItem("login");
+    
     if (log) {
+
+      setTimeout(() => {
+        localStorage.removeItem('login');
+      },  1000);
       navigate("/");
+     
     }
   });
 
