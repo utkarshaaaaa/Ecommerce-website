@@ -70,11 +70,11 @@ export default function Login() {
   return (
     <div>
       <div className="form-login">
-        <form action="" class="form_main" method="POST" onSubmit={handleSubmit}>
+        <form action="" className="form_main" method="POST" onSubmit={handleSubmit}>
           <p className="heading">Login</p>
           <div className="inputContainer">
             <svg
-              class="inputIcon"
+              className="inputIcon"
               xmlns="http://www.w3.org/2000/svg"
               width="16"
               height="16"
@@ -90,13 +90,13 @@ export default function Login() {
               value={datalist.username}
               onChange={handleChange}
               required
-              class="inputField"
+              className="inputField"
               id="username"
               placeholder="Username"
             />
           </div>
 
-          <div class="inputContainer">
+          <div className="inputContainer">
             <svg
               className="inputIcon"
               xmlns="http://www.w3.org/2000/svg"
@@ -113,7 +113,7 @@ export default function Login() {
               required
               value={datalist.password}
               onChange={handleChange}
-              class="inputField"
+              className="inputField"
               id="password"
               placeholder="Password"
             />
