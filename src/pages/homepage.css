@@ -23,13 +23,14 @@ body {
     align-items: center;
   }
   .profile {
-    width: 65px;
+    width: 55px;
     height: 60px;
     display: flex;
     align-items: center;
 
+
     padding: 10px;
-    border-radius: 30px;
+    border-radius: 50px;
     border: 1px solid #C6CACE;
     box-shadow: 0px 1px 2px 0px #1F1E241F;
   }

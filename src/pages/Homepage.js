@@ -107,7 +107,7 @@ export default function Homepage({ onClick }) {
             $30
             <input
               type="range"
-              min={30}
+              min={10}
               max={1000}
               value={price}
               onChange={(e) => {
@@ -151,7 +151,6 @@ export default function Homepage({ onClick }) {
               src={userimg}
               alt="Profile"
               width="55"
-              
               height="60"
               style={{ borderradius: 70 }}
             />

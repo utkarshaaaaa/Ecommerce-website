@@ -1,6 +1,6 @@
 body{
    
-    background: linear-gradient(120deg, #007bff, #d0314c);
+    background: linear-gradient(120deg, #1e1e1f, #edeaeb);
    
 }
 
@@ -71,7 +71,7 @@ body{
   
   .inputField:focus {
     outline: none;
-    border-bottom: 2px solid rgb(199, 114, 255);
+    border-bottom: 2px solid rgb(28, 21, 208);
   }
   
   .inputField::placeholder {

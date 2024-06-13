@@ -24,7 +24,7 @@ function App() {
     },
     {
       path:'/',
-      element:<Protected Pages={Homepage} />
+      element:<Protected Pages={Homepage}/>
     }
   ])
 

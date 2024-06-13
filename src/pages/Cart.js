@@ -40,6 +40,8 @@ export default function Cart() {
                 <span className="title"> {e.title}</span>
                 <p>
                   {e.description}
+
+                  
                   <div>
                     <br/>
                   <button class="button" onClick={() => {
@@ -48,6 +50,8 @@ export default function Cart() {
                             removeitem()
                           );
                         }}>Remove Cart</button>
+                  
+                 
                  
                   </div>
                   
@@ -65,15 +69,16 @@ export default function Cart() {
               </div>
               
             </div>
-            <div>
-                    <button onClick={back}>Back</button>
-                  </div>
+            
           </div>
           
          
         );
       })}
+  
       </div>
+
+      
      
       
     </div>
