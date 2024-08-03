@@ -15,7 +15,7 @@ function App() {
 
   const route=createBrowserRouter([
     {
-      path:'/log',
+      path:'/',
       element:<Login/>
     },
     {
@@ -29,7 +29,7 @@ function App() {
 
     },
     {
-      path:'/',
+      path:'/homepage',
       element:<Protected Pages={Homepage}/>
     }
   ])

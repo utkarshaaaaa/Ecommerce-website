@@ -14,7 +14,7 @@ export default function Homepage({ onClick }) {
     setitemNumber,
     userimg,
     userdata,
-    setuserdata,
+
   } = useContext(Data);
 
   //number of item in cart
@@ -37,7 +37,6 @@ export default function Homepage({ onClick }) {
 
   //navigate to items
   const itemRoute = (Id) => {
-    // console.log(id)
     setid(id);
     navigate("/items", { state: { id: Id } });
   };
@@ -48,12 +47,12 @@ export default function Homepage({ onClick }) {
   };
 
   useEffect(() => {
-    setTimeout(() => {
+    
       axios.get("https://dummyjson.com/products").then((res) => {
         setdata(res.data.products);
         setotherdata(res.data.products);
       });
-    }, 100);
+   
   }, []);
 
   
@@ -103,8 +102,8 @@ export default function Homepage({ onClick }) {
           </h2>
           
           <div className="PB-range-slider-div">
-            <div>Price -${price}</div>
-            $30
+            <div className="price-range">Price Range -${price}</div>
+            <div className="price-range">$10</div>
             <input
               type="range"
               min={10}
@@ -116,7 +115,7 @@ export default function Homepage({ onClick }) {
               className="PB-range-slider"
               id="myRange"
             />
-            <p className="PB-range-slidervalue">$1000</p>
+            <p className="price-range">$1000</p>
           </div>
           <div className="search-container">
             <input
@@ -129,22 +128,7 @@ export default function Homepage({ onClick }) {
               }}
             />
 
-            <div className="search-options">
-              <select
-                className="dropdown"
-                onClick={filteredCategories}
-                onChange={(e) => {
-                  setitemcategory(e.target.value);
-                }}
-              >
-                <option value="smartphones">Phones</option>
-                <option value="laptops">Laptops</option>
-                <option value="fragrances">Perfume</option>
-                <option value="groceries">Groceries</option>
-                <option value="home-decoration">Decoration</option>
-                <option value="skincare">Skin Care</option>
-              </select>
-            </div>
+            
           </div>
           <div className="profile">
             <img
@@ -160,8 +144,7 @@ export default function Homepage({ onClick }) {
 
         <div className="sidebar-container">
           <div className="sidebar">
-            <a href="#">About</a>
-            <a href="#">You</a>
+            <a >About</a>
             <a href="#" onClick={cartRoute}>
               Cart - {itemNumber}{" "}
             </a>
@@ -179,6 +162,7 @@ export default function Homepage({ onClick }) {
                     onClick={() => {
                       itemRoute(e.id);
                     }}
+                    className="img"
                   />
 
                   <div className="product-content">

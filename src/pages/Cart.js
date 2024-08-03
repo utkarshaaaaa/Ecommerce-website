@@ -3,10 +3,8 @@ import React, { useEffect, useState, useContext } from "react";
 import { Data } from "../Context";
 import "./cart.css";
 export default function Cart() {
-
-
-  const navigate=useNavigate()
-  const { cart, setcart ,itemNumber, setitemNumber} = useContext(Data);
+  const navigate = useNavigate();
+  const { cart, setcart, itemNumber, setitemNumber } = useContext(Data);
   const [totalprice, settotalprice] = useState(0);
   useEffect(() => {
     settotalprice(cart.reduce((acc, cur) => acc + Number(cur.price), 0));
@@ -16,71 +14,65 @@ export default function Cart() {
     setitemNumber(itemNumber - 1);
   };
 
-
-  const back=()=>{
-    navigate(-1)
-  }
+  const navigateBack = () => {
+    navigate('/homepage');
+  };
 
   return (
     <div>
-      <div className="total"><h2>TOTAL PRICE  -   ${totalprice}</h2> 
-      <h2>Cart Items - {itemNumber}</h2></div>
-      
-       <div className="cont">
-      {cart.map((e) => {
-        return (
-          <div >
-             
-            
-            <div className="card" >
-              <div className="price-item">Price - ${e.price}</div>
-              
-              <img className="card__image" src={e.thumbnail}/>
-              <div className="card__content">
-                <span className="title"> {e.title}</span>
-                <p>
-                  {e.description}
+      <div className="total-container">
+        <div className="total-price-container">
+          <h2 className="total-price">TOTAL PRICE</h2>
+          <p className="price-amount">${totalprice}</p>
+        </div>
+        <div className="cart-items-container">
+          <h2 className="cart-items">Cart Items :</h2>
+          <p className="item-number">{itemNumber}</p>
+        </div>
+      </div>
 
-                  
-                  <div>
-                    <br/>
-                  <button class="button" onClick={() => {
+      <div className="cont">
+        {cart.map((e) => {
+          return (
+            <div>
+              <div className="card">
+                <div className="price-item">Price - ${e.price}</div>
+
+                <img className="card__image" src={e.thumbnail} />
+                <div className="card__content">
+                  <span className="title"> {e.title}</span>
+                  <p>
+                    {e.description}
+
+                    <div>
+                      <br />
+                      <button
+                        class="button"
+                        onClick={() => {
                           setcart(
                             cart.filter((a) => a.id !== e.id),
                             removeitem()
                           );
-                        }}>Remove Cart</button>
-                  
-                 
-                 
-                  </div>
-                  
-                  
-
-                  
-                  
-
-        
-                   
-                  
-
-                </p>
-                
+                        }}
+                      >
+                        Remove Cart
+                      </button>
+                    </div>
+                  </p>
+                </div>
               </div>
-              
             </div>
-            
-          </div>
-          
-         
-        );
-      })}
-  
+          );
+        })}
+        
       </div>
+      <div className="back">
+      <button className="action-back" onClick={()=>{navigateBack()}}>Go back</button>
 
-      
+      </div>
+    
      
-      
     </div>
+
   );
 }

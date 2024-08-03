@@ -1,13 +1,7 @@
-search-icon
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f80a0a;
-  }
+
   .welcome{
      border-radius: 6px;
-   border: 1px solid #C6CACE;
+  
    padding-right: 10px;
    padding-left: 10px;
   
@@ -18,7 +12,8 @@ body {
     color: white;
     padding: 10px 20px;
     display: flex;
-    
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
     justify-content: space-between;
     align-items: center;
   }
@@ -31,7 +26,7 @@ body {
 
     padding: 10px;
     border-radius: 50px;
-    border: 1px solid #C6CACE;
+   
     box-shadow: 0px 1px 2px 0px #1F1E241F;
   }
   .sidebar-container {
@@ -68,13 +63,17 @@ body {
     margin-left: 260px;
   }
   .product {
-    background-color: #fff;
+    background: linear-gradient(90deg, rgba(103,213,147,1) 0%, rgba(9,121,76,1) 21%, rgba(0,212,255,1) 100%);
     border-radius: 8px;
     border: 3px solid black;
     overflow: hidden;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
     border-radius: 10px;
+  }
+  .img{
+    border-bottom: 2px solid black;
+   
   }
   .product:hover {
     transform: translateY(-10px);
@@ -135,13 +134,14 @@ body {
     margin-bottom: 10px;
   }
   .product-price {
-    color: #007bff;
+    color: #0f1b0b;
     font-weight: bold;
     text-align: center;
   }
   .product-description {
     font-size: 0.9em;
-    color: #555;
+    color: #211212;
+    font-weight: 30000;
   }
   .search-container {
     position: relative;
@@ -179,7 +179,7 @@ body {
 .add-to-cart-button {
   background-color: #007bff;
   color: #fff; 
-  padding: 10px 20px; 
+  padding: 10px 14px; 
   font-size: 16px; 
   border: none; 
   border-radius: 4px; 
@@ -264,12 +264,23 @@ body {
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  padding: 10px;
+  padding: 20px;
   border-radius: 6px;
-  border: 1px solid #C6CACE;
+ 
   box-shadow: 0px 1px 2px 0px #1F1E241F;
 }
 
 .PB-range-slidervalue {
   font-weight: 600;
 }
+.price-range{
+  font-size: 20px;
+}
+
+
+
+
+
+
+
+

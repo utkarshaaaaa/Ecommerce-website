@@ -6,7 +6,6 @@ import "./login.css";
 import React, { useEffect, useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 
-
 export default function Login() {
   const { setuserimg, datalist, setDatalist, userdata, setuserdata } =
     useContext(Data);
@@ -37,7 +36,7 @@ export default function Login() {
         setuserdata(...userdata, [response.data]);
 
         localStorage.setItem("login", true);
-        navigate("/");
+        navigate("/homepage");
       })
       .catch((error) => {
         if (error.response && error.response.status === 429) {
@@ -49,28 +48,39 @@ export default function Login() {
   };
   useEffect(() => {
     let log = localStorage.getItem("login");
-    
-    if (log) {
 
+    if (log) {
       setTimeout(() => {
-        localStorage.removeItem('login');
-      },  1000);
+        localStorage.removeItem("login");
+      }, 1000);
       navigate("/");
-     
     }
-  });
+    const handleBeforeUnload = () => {
+      localStorage.clear(); 
+    };
+
+    window.addEventListener("beforeunload", handleBeforeUnload);
+
+   
+    return () => {
+      window.removeEventListener("beforeunload", handleBeforeUnload);
+    };
+  }, []);
 
   const UserNamePassword = () => {
     alert("Username: emilys   Password: emilyspass");
     alert("Have Fun shopping  :)");
   };
 
-  console.log(token);
-
   return (
     <div>
       <div className="form-login">
-        <form action="" className="form_main" method="POST" onSubmit={handleSubmit}>
+        <form
+          action=""
+          className="form_main"
+          method="POST"
+          onSubmit={handleSubmit}
+        >
           <p className="heading">Login</p>
           <div className="inputContainer">
             <svg

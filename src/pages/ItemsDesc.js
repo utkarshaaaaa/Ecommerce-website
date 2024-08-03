@@ -2,7 +2,8 @@ import { useLocation } from "react-router-dom";
 import axios from "axios";
 import "./items.css";
 import { Data } from "../Context";
-import React, { useEffect, useState, useContext } from "react";
+import { useNavigate } from "react-router-dom";
+import React, {  useState, useContext, useEffect } from "react";
 
 export default function ItemsDesc() {
   const [id, setid] = useState("");
@@ -16,6 +17,8 @@ export default function ItemsDesc() {
     setitemNumber,
   
   } = useContext(Data);
+
+  const navigate=useNavigate()
 
 
   setTimeout(() => {
@@ -33,11 +36,17 @@ export default function ItemsDesc() {
       });
 
     setid(location.state.id);
-  }, 1);
+  }, 100);
+ 
 
   const Additem = () => {
     setitemNumber(itemNumber + 1);
   };
+
+  const navigateToprevPage=()=>{
+    navigate('/homepage')
+
+  }
 
  
   return (
@@ -60,6 +69,7 @@ export default function ItemsDesc() {
                     <div class="half">
                       <div class="featured_text">
                         <h1>{e.title}</h1>
+                        <br/>
                        
                         <p class="price">${e.price}</p>
                       </div>
@@ -72,6 +82,7 @@ export default function ItemsDesc() {
                     </div>
                     <div class="half">
                       <div class="description">
+                        <h2>Description</h2>
                         <p>
                         {e.description}
                         </p>
@@ -91,7 +102,12 @@ export default function ItemsDesc() {
                           setcart([...cart, e], Additem());
                         }}>Add to cart</button>
                     </div>
+                    <div class="action">
+                      <button type="button" onClick={()=>{navigateToprevPage()}}
+                        >Go back</button>
+                    </div>
                   </div>
+                  
                 </div>
               </div>
             );

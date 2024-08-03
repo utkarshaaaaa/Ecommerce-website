@@ -1,124 +1,229 @@
 .card {
-    width: 300px;
-    height: 500px;
-    background: #b85dcc;
-    color: #073b4c;
-    font-weight: 600;
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    position: relative;
-    transition: all .5s ease;
-    border-radius: 30px;
-    border: 2px solid rgb(239, 243, 165);
-  }
-  
-  .card::before {
-    /* content: "32,99$"; */
-    position: absolute;
-    width: 75px;
-    height: 75px;
-    top: 35%;
-    right: 2px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    background-color: #ef476f;
-    color: aliceblue;
-    font-weight: 800;
-    transition: all .5s ease;
-  }
-  
-  .card__image {
-    width: initial;
-    height: 170px;
-    background: rgb(6,214,160);
-    background: linear-gradient(163deg, #06d6a0 18%, rgba(17,138,178,1) 79%);
-    transition: all .5s ease;
-  }
-  
-  .title {
-    font-weight: 800;
-    font-size: 1.4em;
-  }
-  
-  .card__content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    flex-grow: 1;
-    gap: 10px;
-  }
-  
-  .card:hover {
-    border-top-left-radius: 35px;
-    box-shadow: 5px 5px 0px 0px #06d6a0, 10px 10px 0px 0px #118ab2, 15px 15px 0px 0px #06d6a0, 5px 5px 15px 5px rgba(0,0,0,0);
-  }
-  
-  .card:hover .card__image {
-    border-top-left-radius: 25px;
-  }
-  
-  .card:hover::before {
-    transform: scale(1.3) rotate(-30deg);
-  }
-  
-  .cont {
-    padding: 80px 20px 20px ;
-    padding-right: 200px;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 2fr));
-    gap: 20px;
-    
-    margin-left: 260px;}
+  width: 300px;
+  height: 500px;
+  background: #3e373f;
+  color: #d0eaf3;
+  font-weight: 600;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  position: relative;
+  transition: all 0.5s ease;
+  border-radius: 30px;
+  border: 2px solid rgb(239, 243, 165);
+}
 
-    .total{
-      display: flex;
-      align-items: center;
-      
-      
-      justify-content: space-evenly
-      
+.card::before {
+  position: absolute;
+  width: 75px;
+  height: 75px;
+  top: 35%;
+  right: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #ef476f;
+  color: aliceblue;
+  font-weight: 800;
+  transition: all 0.5s ease;
+}
 
-    }
+.card__image {
+  width: initial;
+  height: 170px;
+  background: rgb(6, 214, 160);
+  background: linear-gradient(163deg, #06d6a0 18%, rgba(17, 138, 178, 1) 79%);
+  transition: all 0.5s ease;
+}
 
-    .price-item{
-      font-size: 20px;
-      font-weight: 700;
-      font-style: unset;
-    }
-    .button {
-      padding: 12px 25px;
-      background: #fff;
-      border: 1px solid #121212;
-      color: #121212;
-      font-weight: 700;
-      cursor: pointer;
-      border-radius: 50px;
-      position: relative;
-      z-index: 2;
-      overflow: hidden;
-      transition: all 0.5s ease;
-    }
-    .button::after {
-      content: "";
-      width: 100%;
-      height: 100%;
-      background: #121212;
-      position: absolute;
-      bottom: -100%;
-      left: 0;
-      border-radius: 50%;
-      z-index: -1;
-      transition: all 0.5s ease;
-    }
-    .button:hover {
-      color: #fff;
-    }
-    .button:hover::after {
-      bottom: 0;
-      border-radius: 0;
-    }
-    
+.title {
+  font-weight: 800;
+  font-size: 1.4em;
+}
+
+.card__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+  gap: 10px;
+}
+
+.card:hover .card__image {
+  border-radius: 25px;
+
+}
+
+.card:hover::before {
+  transform: scale(1.3) rotate(-30deg);
+}
+
+.cont {
+  padding: 80px 20px 20px;
+  padding-right: 200px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 2fr));
+  gap: 20px;
+
+  margin-left: 260px;
+}
+
+.total {
+  display: flex;
+  align-items: center;
+
+  justify-content: space-evenly;
+}
+
+.price-item {
+  font-size: 20px;
+  font-weight: 700;
+  font-style: unset;
+}
+.button {
+  padding: 12px 25px;
+  background: #fff;
+  border: 1px solid #121212;
+  color: #121212;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 50px;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+.button::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #121212;
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  border-radius: 50%;
+  z-index: -1;
+  transition: all 0.5s ease;
+}
+.button:hover {
+  color: #fff;
+}
+.button:hover::after {
+  bottom: 0;
+  border-radius: 0;
+}
+
+.total-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn 1s ease-in-out;
+  color: #ffffff;
+}
+
+.total-price-container,
+.cart-items-container {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.total-price,
+.cart-items {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.price-amount,
+.item-number {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+.price-amount {
+  color: #ffdf5d;
+}
+
+.item-number {
+  color: #f70808;
+  
+}
+
+@media (min-width: 600px) {
+  .total-container {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .total-price-container,
+  .cart-items-container {
+    text-align: left;
+  }
+
+  .total-price,
+  .cart-items {
+    font-size: 28px;
+  }
+
+  .price-amount,
+  .item-number {
+    font-size: 36px;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.action-back {
+  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  border: none;
+  border-radius: 30px;
+  padding: 5px 20px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.action-back:hover {
+  background: linear-gradient(135deg, #feb47b, #ff7e5f);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px);
+}
+
+.action-back:active {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+@media (min-width: 600px) {
+  .action-back {
+    font-size: 1.5em;
+    padding: 15px 30px;
+  }
+}
+.back{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
