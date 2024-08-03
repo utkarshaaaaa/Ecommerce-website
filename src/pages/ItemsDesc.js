@@ -56,53 +56,53 @@ export default function ItemsDesc() {
           {data.map((e) => {
             return (
               <div>
-                <div class="cardItem">
-                  <div class="card__title">
-                    <div class="icon">
+                <div className="cardItem">
+                  <div className="card__title">
+                    <div className="icon">
                       <a href="#">
-                        <i class="fa fa-arrow-left"></i>
+                        <i className="fa fa-arrow-left"></i>
                       </a>
                     </div>
                     
                   </div>
-                  <div class="card__body">
-                    <div class="half">
-                      <div class="featured_text">
+                  <div className="card__body">
+                    <div className="half">
+                      <div className="featured_text">
                         <h1>{e.title}</h1>
                         <br/>
                        
-                        <p class="price">${e.price}</p>
+                        <p className="price">${e.price}</p>
                       </div>
-                      <div class="image">
+                      <div className="image">
                         <img
                           src={e.thumbnail}
                           alt="image"
                         />
                       </div>
                     </div>
-                    <div class="half">
-                      <div class="description">
+                    <div className="half">
+                      <div className="description">
                         <h2>Description</h2>
                         <p>
                         {e.description}
                         </p>
                       </div>
-                      <span class="stock">
-                        <i class="fa fa-pen"></i> In stock
+                      <span className="stock">
+                        <i className="fa fa-pen"></i> In stock
                       </span>
                       
                     </div>
                   </div>
-                  <div class="card__footer">
-                    <div class="recommend">
+                  <div className="card__footer">
+                    <div className="recommend">
                       
                     </div>
-                    <div class="action">
+                    <div className="action">
                       <button type="button"onClick={() => {
                           setcart([...cart, e], Additem());
                         }}>Add to cart</button>
                     </div>
-                    <div class="action">
+                    <div className="action">
                       <button type="button" onClick={()=>{navigateToprevPage()}}
                         >Go back</button>
                     </div>
