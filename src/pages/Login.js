@@ -68,7 +68,7 @@ export default function Login() {
   }, []);
 
   const UserNamePassword = () => {
-    alert("Username: emilys   Password: emilyspass");
+    alert("Username: emilys -  Password: emilyspass");
     alert("Have Fun shopping  :)");
   };
 
