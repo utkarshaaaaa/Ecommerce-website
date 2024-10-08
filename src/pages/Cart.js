@@ -40,7 +40,7 @@ export default function Cart() {
 
                 <img className="card__image" src={e.thumbnail} />
                 <div className="card__content">
-                  <span className="title"> {e.title}</span>
+                  <span className="title"> {e.title} </span>
                   <p>
                     {e.description}
 
