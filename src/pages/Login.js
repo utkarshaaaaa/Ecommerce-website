@@ -56,6 +56,7 @@ export default function Login() {
       navigate("/");
     }
     const handleBeforeUnload = () => {
+      //clearing local storage key
       localStorage.clear(); 
     };
 
