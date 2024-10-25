@@ -104,7 +104,7 @@ export default function ItemsDesc() {
                     </div>
                     <div className="action">
                       <button type="button" onClick={()=>{navigateToprevPage()}}
-                        >Go back</button>
+                        >Go   Back</button>
                     </div>
                   </div>
                   
