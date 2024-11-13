@@ -63,7 +63,7 @@
     margin-left: 260px;
   }
   .product {
-    background: linear-gradient(90deg, rgba(103,213,147,1) 0%, rgba(9,121,76,1) 21%, rgba(0,212,255,1) 100%);
+    background: linear-gradient(0deg, rgba(34,193,195,1) 30%, rgba(181,45,253,1) 100%);
     border-radius: 8px;
     border: 3px solid black;
     overflow: hidden;
