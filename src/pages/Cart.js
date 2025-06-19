@@ -36,7 +36,7 @@ export default function Cart() {
           return (
             <div>
               <div className="card">
-                <div className="price-item">Price - ${e.price}</div>
+                <div className="price-item">${e.price}</div>
 
                 <img className="card__image" src={e.thumbnail} />
                 <div className="card__content">
