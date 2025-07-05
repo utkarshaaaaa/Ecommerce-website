@@ -102,7 +102,7 @@ export default function Homepage({ onClick }) {
           </h2>
           
           <div className="PB-range-slider-div">
-            <div className="price-range">${price}</div>
+            <div className="price-range">${price} : </div>
             <div className="price-range">$10</div>
             <input
               type="range"
