@@ -55,7 +55,7 @@ export default function Cart() {
                           );
                         }}
                       >
-                        Remove Cart
+                        Remove 
                       </button>
                     </div>
                   </p>
