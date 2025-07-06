@@ -26,7 +26,7 @@ export default function Cart() {
           <p className="price-amount">${parseFloat(totalprice).toFixed(2)}</p>
         </div>
         <div className="cart-items-container">
-          <h2 className="cart-items">Cart Items :</h2>
+          <h2 className="cart-items">Total Items :</h2>
           <p className="item-number">{itemNumber}</p>
         </div>
       </div>
