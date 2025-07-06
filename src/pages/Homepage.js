@@ -176,7 +176,7 @@ export default function Homepage({ onClick }) {
                           setcart([...cart, e], Additem());
                         }}
                       >
-                        Add to Cart
+                        Add Item
                       </button>
                       <button
                         className="add-to-cart-button"
@@ -187,7 +187,7 @@ export default function Homepage({ onClick }) {
                           );
                         }}
                       >
-                        Remove Cart
+                        Remove
                       </button>
                     </div>
                   </div>
