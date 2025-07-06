@@ -100,7 +100,7 @@ export default function ItemsDesc() {
                     <div className="action">
                       <button type="button"onClick={() => {
                           setcart([...cart, e], Additem());
-                        }}>Add to cart</button>
+                        }}>Add Item</button>
                     </div>
                     <div className="action">
                       <button type="button" onClick={()=>{navigateToprevPage()}}
